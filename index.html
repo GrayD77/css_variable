@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Document</title>
+
+	<style>
+		:root {
+			--offset-left: 0;
+		}
+
+		.popup {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			overflow: auto;
+		}
+
+		table {
+			width: 600px;
+		}
+
+		td {
+			padding: 10px 5px;
+			width: 140px;
+			border: 1px solid #efefef;
+		}
+
+		.js_fix {
+			background-color: #f4cd47;
+			transform: translateX(var(--offset-left));
+		}
+
+
+	</style>
+</head>
+<body>
+
+	<div class="popup">
+		<table>
+			<tr>
+				<td class="js_fix"><span>row-1</span></td>
+				<td>ok!</td>
+				<td>ok!</td>
+				<td>ok!</td>
+			</tr>
+			<tr>
+				<td class="js_fix"><span>row-2</span></td>
+				<td>ok!</td>
+				<td>ok!</td>
+				<td>ok!</td>
+			</tr>
+			<tr>
+				<td class="js_fix"><span>row-3</span></td>
+				<td>ok!</td>
+				<td>ok!</td>
+				<td>ok!</td>
+			</tr>
+			<tr>
+				<td class="js_fix"><span>row-4</span></td>
+				<td>ok!</td>
+				<td>ok!</td>
+				<td>ok!</td>
+			</tr>
+			<tr>
+				<td class="js_fix"><span>row-5</span></td>
+				<td>ok!</td>
+				<td>ok!</td>
+				<td>ok!</td>
+			</tr>
+			<tr>
+				<td class="js_fix"><span>row-6</span></td>
+				<td>ok!</td>
+				<td>ok!</td>
+				<td>ok!</td>
+			</tr>
+			<tr>
+				<td class="js_fix"><span>row-7</span></td>
+				<td>ok!</td>
+				<td>ok!</td>
+				<td>ok!</td>
+			</tr>
+			<tr>
+				<td class="js_fix"><span>row-8</span></td>
+				<td>ok!</td>
+				<td>ok!</td>
+				<td>ok!</td>
+			</tr>
+			<tr>
+				<td class="js_fix"><span>row-9</span></td>
+				<td>ok!</td>
+				<td>ok!</td>
+				<td>ok!</td>
+			</tr>
+			<tr>
+				<td class="js_fix"><span>row-10</span></td>
+				<td>ok!</td>
+				<td>ok!</td>
+				<td>ok!</td>
+			</tr>
+			<tr>
+				<td class="js_fix"><span>row-7</span></td>
+				<td>ok!</td>
+				<td>ok!</td>
+				<td>ok!</td>
+			</tr>
+			<tr>
+				<td class="js_fix"><span>row-8</span></td>
+				<td>ok!</td>
+				<td>ok!</td>
+				<td>ok!</td>
+			</tr>
+			<tr>
+				<td class="js_fix"><span>row-9</span></td>
+				<td>ok!</td>
+				<td>ok!</td>
+				<td>ok!</td>
+			</tr>
+			<tr>
+				<td class="js_fix"><span>row-10</span></td>
+				<td>ok!</td>
+				<td>ok!</td>
+				<td>ok!</td>
+			</tr>
+			<tr>
+				<td class="js_fix"><span>row-7</span></td>
+				<td>ok!</td>
+				<td>ok!</td>
+				<td>ok!</td>
+			</tr>
+			<tr>
+				<td class="js_fix"><span>row-8</span></td>
+				<td>ok!</td>
+				<td>ok!</td>
+				<td>ok!</td>
+			</tr>
+			<tr>
+				<td class="js_fix"><span>row-9</span></td>
+				<td>ok!</td>
+				<td>ok!</td>
+				<td>ok!</td>
+			</tr>
+			<tr>
+				<td class="js_fix"><span>row-10</span></td>
+				<td>ok!</td>
+				<td>ok!</td>
+				<td>ok!</td>
+			</tr>
+			<tr>
+				<td class="js_fix"><span>row-7</span></td>
+				<td>ok!</td>
+				<td>ok!</td>
+				<td>ok!</td>
+			</tr>
+			<tr>
+				<td class="js_fix"><span>row-8</span></td>
+				<td>ok!</td>
+				<td>ok!</td>
+				<td>ok!</td>
+			</tr>
+			<tr>
+				<td class="js_fix"><span>row-9</span></td>
+				<td>ok!</td>
+				<td>ok!</td>
+				<td>ok!</td>
+			</tr>
+			<tr>
+				<td class="js_fix"><span>row-10</span></td>
+				<td>ok!</td>
+				<td>ok!</td>
+				<td>ok!</td>
+			</tr>
+		</table>
+	</div>
+
+
+
+	<script>
+		const popup = document.querySelector('.popup');
+
+		let updatePosition = function() {
+			document.documentElement.style.setProperty('--offset-left', popup.scrollLeft + 'px');
+			requestAnimationFrame(updatePosition)
+		}
+
+		updatePosition();
+	</script>
+
+
+</body>
+</html>
